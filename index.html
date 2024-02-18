@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -10,6 +11,15 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+    <link rel="icon" href="./favicons/favicon.ico" type="image/x-icon" sizes="any" />
+    <link rel="icon" href="./favicons/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="icon" href="./favicons/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      href="./favicons/apple-touch-icon.png"
+      type="image/png"
+    />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
@@ -25,12 +35,7 @@
             </button>
           </li>
           <li class="theme-menu__item">
-            <button
-              type="button"
-              data-theme="auto"
-              disabled
-              class="theme-menu__button"
-            >
+            <button type="button" data-theme="auto" disabled class="theme-menu__button">
               Авто
             </button>
           </li>
@@ -49,9 +54,9 @@
             <h2 class="card__title">Заголовок карточки</h2>
             <div class="card__cover">
               <img
-                src="https://picsum.photos/640/480"
-                alt="Изображение карточки"
                 class="card__cover-image"
+                src="./images/food-truck.jpg"
+                alt="Изображение карточки"
               />
             </div>
             <div class="card__text">

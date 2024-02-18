@@ -17,4 +17,33 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main, sans-serif);
+  font-weight: var(--display-text-weight-base);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.header {
+  font-family: var(--font-accent, serif);
+}
+
+.card {
+  border: 2px solid var(--color-lines);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__title {
+  padding: 0 10px;
+  align-self: flex-start;
+}
+
+.card__cover-image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
