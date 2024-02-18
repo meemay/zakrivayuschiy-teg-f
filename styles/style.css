@@ -14,31 +14,97 @@
 
 */
 
+.button {
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  text-align: center;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-main, sans-serif);
+  font-family: var(--display-text-font-main, sans-serif);
   font-weight: var(--display-text-weight-base);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
+  min-block-size: 100vh;
+
+  /* FIXME: debug only */
+  /* padding: 0 2px; */
 }
 
 .header {
-  font-family: var(--font-accent, serif);
+  margin: 100px auto; /* figma 102 */
+  max-inline-size: var(--content-max-inline-size);
+  font-family: var(--display-text-font-accent, serif);
+  border: 2px solid var(--color-lines);
 }
 
-.card {
-  border: 2px solid var(--color-lines);
+.header__logo {
+  margin: clamp(120px, 32%, 136px) auto 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__title {
+  font-size: var(--display-text-size-4);
+}
+
+.header__description {
+  font-size: var(--display-text-size-3);
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: left;
+  gap: 10px; /* figma 14 */
+}
+
+.theme-menu__button {
+  text-transform: uppercase;
+  font-size: var(--display-text-size-1);
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.content__cards {
+  display: grid;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card {
+  border: 2px solid var(--color-lines);
+  max-inline-size: var(--content-max-inline-size);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--display-text-size-2);
+
+  /* FIXME: debug only */
+  margin-bottom: 100px;
 }
 
 .card__title {
-  padding: 0 10px;
+  padding: 5px 10px;
   align-self: flex-start;
+  font-size: inherit;
+  font-variation-settings: 'wght' var(--display-text-weight-accent);
+  border-bottom: 2px solid currentColor;
 }
+
+/* TODO: remove card__cover class? */
 
 .card__cover-image {
   display: block;
@@ -46,4 +112,31 @@
   block-size: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.card__description {
+  border-top: 2px solid currentColor;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: inherit;
+  font-variation-settings: 'wght' var(--display-text-weight-base);
+  line-height: 116.667%;
+}
+
+.card__actions {
+  justify-self: end;
+  display: flex;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+.card__like-button {
+  padding: 10px 35px;
+  border: 2px solid currentColor;
+  font-family: 'Press Start 2P';
+  font-size: var(--display-text-size-1);
+  font-variation-settings: 'wght' var(--display-text-weight-base);
+  line-height: 90%;
 }

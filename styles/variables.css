@@ -1,11 +1,16 @@
 :root {
-  --font-main: 'Inter';
-  --font-accent: 'PressStart2P';
+  --display-text-font-main: 'Inter';
+  --display-text-font-accent: 'Press Start 2P';
+  --display-text-weight-base: 400;
+  --display-text-weight-accent: 700;
+  --display-text-size-1: 14px;
+  --display-text-size-2: 18px;
+  --display-text-size-3: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --display-text-size-4: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 
   --color-bg: #fff;
   --color-text-primary: #000;
   --color-lines: #000;
 
-  --display-text-weight-base: 400;
-  --display-text-weight-accent: 700;
+  --content-max-inline-size: clamp(375px, 100vw, 700px);
 }
