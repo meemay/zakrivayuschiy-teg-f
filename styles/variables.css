@@ -14,6 +14,8 @@
 
   --content-max-inline-size: clamp(375px, 100vw, 700px);
   --border-line-size: 2px;
+  --spacing-base: 25px;
+  --spacing-base-compensated: calc(var(--spacing-base) - var(--border-line-size));
   --menu-offset: 20px;
   --menu-arrow-offset: calc(0px - (var(--menu-offset) - 4px));
 }
