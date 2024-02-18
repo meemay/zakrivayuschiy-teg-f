@@ -29,15 +29,18 @@
   font-weight: var(--display-text-weight-base);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
-  min-block-size: 100vh;
 
   /* FIXME: debug only */
   /* padding: 0 2px; */
 }
 
+.content-section {
+  max-inline-size: var(--content-max-inline-size);
+  margin: 0 auto;
+}
+
 .header {
   margin: 100px auto; /* figma 102 */
-  max-inline-size: var(--content-max-inline-size);
   font-family: var(--display-text-font-accent, serif);
   border: 2px solid var(--color-lines);
 }
@@ -48,6 +51,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  text-transform: uppercase;
 }
 
 .header__title {
@@ -56,7 +60,6 @@
 
 .header__description {
   font-size: var(--display-text-size-3);
-  text-transform: uppercase;
 }
 
 .theme-menu__list {
@@ -86,7 +89,6 @@
 
 .card {
   border: 2px solid var(--color-lines);
-  max-inline-size: var(--content-max-inline-size);
   display: grid;
   justify-content: center;
   align-items: center;
@@ -104,7 +106,32 @@
   border-bottom: 2px solid currentColor;
 }
 
-/* TODO: remove card__cover class? */
+.card__cover {
+  position: relative;
+}
+
+.card__cover-label {
+  position: absolute;
+  content: '';
+  /* FIXME: adaptive inset */
+  top: 25px;
+  right: 15px;
+  color: currentColor;
+  font-family: var(--display-text-font-accent);
+  font-size: var(--display-text-size-1);
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 var(--color-bg), 1px -1px 0 var(--color-bg),
+    -1px 1px 0 var(--color-bg), 1px 1px 0 var(--color-bg);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+}
+
+@supports (-webkit-text-stroke: #fff) {
+  .card__cover-label {
+    text-shadow: unset;
+    -webkit-text-stroke: 1px var(--color-bg);
+  }
+}
 
 .card__cover-image {
   display: block;
@@ -128,11 +155,18 @@
 .card__actions {
   justify-self: end;
   display: flex;
-  padding-right: 25px;
-  padding-bottom: 25px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button__text {
   padding: 10px 35px;
   border: 2px solid currentColor;
   font-family: 'Press Start 2P';
