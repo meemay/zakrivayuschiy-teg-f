@@ -12,3 +12,13 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes selected-item {
+  0% {
+    left: var(--menu-arrow-offset);
+  }
+
+  100% {
+    left: calc(var(--menu-arrow-offset) + 4px);
+  }
+}

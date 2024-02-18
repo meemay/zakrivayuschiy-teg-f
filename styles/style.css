@@ -17,6 +17,7 @@
 .button {
   cursor: pointer;
   border: none;
+  padding: var(--border-line-size);
   appearance: none;
   background-color: transparent;
   text-align: center;
@@ -29,9 +30,6 @@
   font-weight: var(--display-text-weight-base);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
-
-  /* FIXME: debug only */
-  /* padding: 0 2px; */
 }
 
 .content-section {
@@ -40,9 +38,11 @@
 }
 
 .header {
-  margin: 100px auto; /* figma 102 */
+  display: grid;
+  place-items: center;
+  margin: 100px auto;
   font-family: var(--display-text-font-accent, serif);
-  border: 2px solid var(--color-lines);
+  border: var(--border-line-size) solid var(--color-lines);
 }
 
 .header__logo {
@@ -64,12 +64,14 @@
 
 .theme-menu__list {
   margin-bottom: 25px;
+  padding-left: var(--menu-offset);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  gap: 10px; /* figma 14 */
+  gap: 10px;
+}
+
+.theme-menu__item {
+  position: relative;
 }
 
 .theme-menu__button {
@@ -81,6 +83,13 @@
   opacity: 0.6;
 }
 
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  left: var(--menu-arrow-offset);
+  animation: selected-item 1s ease-in-out infinite alternate;
+}
+
 .content__cards {
   display: grid;
   justify-content: center;
@@ -88,7 +97,7 @@
 }
 
 .card {
-  border: 2px solid var(--color-lines);
+  border: var(--border-line-size) solid var(--color-lines);
   display: grid;
   justify-content: center;
   align-items: center;
@@ -99,11 +108,11 @@
 }
 
 .card__title {
-  padding: 5px 10px;
+  padding: 5px 10px; /* TODO: old mac good: 4px 10px */
   align-self: flex-start;
   font-size: inherit;
   font-variation-settings: 'wght' var(--display-text-weight-accent);
-  border-bottom: 2px solid currentColor;
+  border-bottom: var(--border-line-size) solid var(--color-lines);
 }
 
 .card__cover {
@@ -142,11 +151,11 @@
 }
 
 .card__description {
-  border-top: 2px solid currentColor;
+  border-top: var(--border-line-size) solid var(--color-lines);
   padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 30px; /* TODO: old mac good: 28px */
   font-size: inherit;
   font-variation-settings: 'wght' var(--display-text-weight-base);
   line-height: 116.667%;
@@ -168,7 +177,7 @@
 
 .button__text {
   padding: 10px 35px;
-  border: 2px solid currentColor;
+  border: var(--border-line-size) solid var(--color-lines);
   font-family: 'Press Start 2P';
   font-size: var(--display-text-size-1);
   font-variation-settings: 'wght' var(--display-text-weight-base);
