@@ -14,6 +14,8 @@
   </head>
   <body class="page">
     <header class="header">
+      <h1 class="header__title">&lt;/HTML&gt;</h1>
+      <p class="header__description">Закрывающий тег</p>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -40,7 +42,32 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="content">
+      <ul class="content__cards">
+        <li class="content__cards-item">
+          <article class="card">
+            <h2 class="card__title">Заголовок карточки</h2>
+            <div class="card__cover">
+              <img
+                src="https://picsum.photos/640/480"
+                alt="Изображение карточки"
+                class="card__cover-image"
+              />
+            </div>
+            <div class="card__text">
+              <p>Текст карточки 1</p>
+              <p>Текст карточки 2</p>
+            </div>
+            <div class="card__buttons">
+              <button class="button button_like">Like</button>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+    <footer class="footer">
+      <button class="button button_like">Сохранить на память</button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
