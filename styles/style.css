@@ -259,28 +259,28 @@
   max-inline-size: 28px;
 }
 
-/* img cover theme */
+/* img cover filters */
 
-.img-theme_retro {
+.img-filter_retro {
   filter: sepia(0.9);
 }
 
-.img-theme_monochrome {
+.img-filter_monochrome {
   filter: grayscale(80%);
 }
 
-.img-theme_high-contrast {
+.img-filter_high-contrast {
   filter: contrast(200%);
 }
 
-.img-theme_phantom {
+.img-filter_phantom {
   filter: hue-rotate(0.95turn) contrast(80%) invert(100%) saturate(60%);
 }
 
-.img-theme_enigma {
+.img-filter_enigma {
   filter: blur(10px);
 }
 
-.img-theme_neon {
+.img-filter_neon {
   filter: brightness(150%) hue-rotate(0.82turn) contrast(150%) saturate(120%);
 }
