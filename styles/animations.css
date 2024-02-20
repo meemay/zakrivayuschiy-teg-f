@@ -22,3 +22,6 @@
     left: calc(var(--menu-arrow-offset) + 4px);
   }
 }
+
+
+@keyframes like {}

@@ -1,16 +1,24 @@
 :root.theme_light {
-  --color-bg: #fff;
   --color-text-primary: #000;
   --color-lines: #000;
+
+  --color-bg-base: #fff;
+  --color-bg-stripe: #d3d3d3;
+  --color-bg-gradient-start: #e7e7e7;
+  --color-bg-gradient-end: #1a1a1a;
 
   --display-text-weight-base: 400;
   --display-text-weight-accent: 700;
 }
 
 :root.theme_dark {
-  --color-bg: #000;
   --color-text-primary: #00cc14;
   --color-lines: #00cc14;
+
+  --color-bg-base: #000;
+  --color-bg-stripe: #000;
+  --color-bg-gradient-start: #007f0c;
+  --color-bg-gradient-end: #004306;
 
   --display-text-weight-base: 465;
   --display-text-weight-accent: 785;

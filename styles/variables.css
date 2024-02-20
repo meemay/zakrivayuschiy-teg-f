@@ -8,14 +8,45 @@
   --display-text-size-3: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --display-text-size-4: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 
-  --color-bg: #fff;
   --color-text-primary: #000;
   --color-lines: #000;
+
+  --color-icon-heart-contour: #000;
+  --color-icon-heart-sparks: #ff0000;
+  --color-icon-heart-body: #ff0000;
+  --color-icon-heart-core: #fff;
+
+  --color-bg-base: #fff;
+  --color-bg-stripe: #d3d3d3;
+  --color-bg-gradient-start: #e7e7e7;
+  --color-bg-gradient-end: #1a1a1a;
+
+  --background: repeating-linear-gradient(
+      90deg,
+      var(--color-bg-stripe) 0px,
+      var(--color-bg-stripe) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--color-bg-stripe) 0px,
+      var(--color-bg-stripe) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      180deg,
+      var(--color-bg-gradient-start) 0.01%,
+      var(--color-bg-gradient-end) 100%
+    );
 
   --content-max-inline-size: clamp(375px, 100vw, 700px);
   --border-line-size: 2px;
   --spacing-base: 25px;
-  --spacing-base-compensated: calc(var(--spacing-base) - var(--border-line-size));
+  --spacing-base-compensated: calc(
+    var(--spacing-base) - var(--border-line-size)
+  );
   --menu-offset: 20px;
   --menu-arrow-offset: calc(0px - (var(--menu-offset) - 4px));
 }
