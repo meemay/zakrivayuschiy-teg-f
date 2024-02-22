@@ -3,9 +3,9 @@ https://github.com/meemay/zakrivayuschiy-teg-f.git
 
 TODO:
  - [ ] theme related color for favicon
- - [ ] like animation
- - [ ] hover effects
- - [ ] focus effect
+ - [x] like animation
+ - [x] hover effects
+ - [x] focus effect
  - [ ] dialog element
 
 

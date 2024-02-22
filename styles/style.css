@@ -122,14 +122,16 @@
 .card__actions {
   justify-self: end;
   display: flex;
-  gap: 6px;
-  padding-inline-end: var(--spacing-base-compensated);
+  align-items: center;
+  gap: 4px;
+  padding-inline-end: var(--spacing-base);
   padding-block-end: var(--spacing-base-compensated);
 }
 
 .footer {
   margin: 50px 0 100px;
   display: grid;
+  grid-template-columns: 100vw;
   place-items: center;
   background-color: transparent;
 }
@@ -152,8 +154,26 @@
   outline: none;
 }
 
-.button_bordered {
+.button-theme_slider {
+  position: relative;
+  overflow: hidden;
   border: var(--border-line-size) solid var(--color-lines);
+}
+
+.button-theme_slider::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  transform: translateX(-100%);
+  background-color: var(--color-button-slider-bg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-theme_slider:hover::after {
+  transform: translateX(0);
 }
 
 .button__text {
@@ -163,13 +183,26 @@
   line-height: 90%;
 }
 
+.button-theme_slider .save-icon,
+.button-theme_slider .button__text {
+  mix-blend-mode: difference;
+  color: var(--color-button-slider-text);
+  z-index: 1;
+}
+
+.save-icon {
+  max-block-size: 28px;
+  max-inline-size: 28px;
+}
+
 .card__icon-button:focus-visible {
   outline: var(--border-line-size) solid var(--color-lines);
-  outline-offset: calc(0px - var(--border-line-size));
+  outline-offset: -3px;
 }
 
 .card__like-button {
-  padding: 10px 35px;
+  block-size: 38px;
+  inline-size: 130px;
 }
 
 .footer__save-button {
@@ -227,36 +260,6 @@
 
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
-}
-
-/* icons */
-
-.like-icon .heart__sparks {
-  fill: var(--color-icon-heart-sparks);
-  opacity: 0;
-}
-
-.like-icon .heart__body {
-  fill: var(--color-icon-heart-body);
-  opacity: 0;
-}
-
-.like-icon .heart__core {
-  fill: var(--color-icon-heart-core);
-  opacity: 0;
-}
-
-.like-icon .heart__contour {
-  fill: var(--color-icon-heart-contour);
-}
-
-/* .like-icon.is-liked .heart__contour {
-  fill: var(--color-icon-heart-body);
-} */
-
-.save-icon {
-  max-block-size: 28px;
-  max-inline-size: 28px;
 }
 
 /* img cover filters */

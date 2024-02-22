@@ -1,18 +1,3 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-*/
-
 @keyframes selected-item {
   0% {
     left: var(--menu-arrow-offset);
@@ -23,5 +8,78 @@
   }
 }
 
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
 
-@keyframes like {}
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes dawn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Heart default */
+
+.like-icon .heart__sparks {
+  fill: var(--color-icon-heart-sparks);
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.like-icon .heart__contour {
+  fill: var(--color-icon-heart-contour);
+  transition: fill 0.1s linear;
+}
+
+.like-icon .heart__body {
+  fill: transparent;
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon .heart__core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+/* Hovers */
+
+.like-icon:hover .heart__core {
+  fill: var(--color-icon-heart-core-hover);
+}
+
+.like-icon:hover .heart__body {
+  fill: var(--color-icon-heart-body-hover);
+}
+
+/* Heart active & clicked */
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: scale 0.3s 0.1s ease-in alternate;
+}
+
+.like-icon.is-liked .heart__sparks {
+  animation: dawn 0.3s 0.3s ease-in alternate;
+}
+
+.like-icon:active .heart__core,
+.like-icon.is-liked .heart__core,
+.like-icon:active .heart__body,
+.like-icon.is-liked .heart__body {
+  fill: var(--color-icon-heart-body);
+}
+
+.like-icon.is-liked .heart__contour {
+  fill: var(--color-icon-heart-body);
+  transition: fill 0.3s 0.1s linear;
+}

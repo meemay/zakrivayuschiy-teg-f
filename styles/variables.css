@@ -10,11 +10,15 @@
 
   --color-text-primary: #000;
   --color-lines: #000;
+  --color-button-slider-bg: #000;
+  --color-button-slider-text: #fff;
 
   --color-icon-heart-contour: #000;
   --color-icon-heart-sparks: #ff0000;
   --color-icon-heart-body: #ff0000;
+  --color-icon-heart-body-hover: #000;
   --color-icon-heart-core: #fff;
+  --color-icon-heart-core-hover: #000;
 
   --color-bg-base: #fff;
   --color-bg-stripe: #d3d3d3;

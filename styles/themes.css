@@ -7,6 +7,13 @@
   --color-bg-gradient-start: #e7e7e7;
   --color-bg-gradient-end: #1a1a1a;
 
+  --color-button-slider-bg: #000;
+  --color-button-slider-text: #fff;
+
+  --color-icon-heart-contour: #000;
+  --color-icon-heart-body-hover: #000;
+  --color-icon-heart-core-hover: #000;
+
   --display-text-weight-base: 400;
   --display-text-weight-accent: 700;
 }
@@ -19,6 +26,13 @@
   --color-bg-stripe: #000;
   --color-bg-gradient-start: #007f0c;
   --color-bg-gradient-end: #004306;
+
+  --color-button-slider-bg: #00cc14;
+  --color-button-slider-text: #00cc14;
+
+  /* TODO: WHAT ARE COLORS FOR THE FUCKING HEARTS ???????? */
+  --color-icon-heart-body-hover: #00cc14;
+  --color-icon-heart-core-hover: #00cc14;
   --color-icon-heart-contour: #00cc14;
 
   --display-text-weight-base: 465;
