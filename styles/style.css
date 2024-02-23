@@ -314,7 +314,7 @@
   content: '▶';
   position: absolute;
   inset-inline-start: var(--menu-arrow-offset);
-  inset-block-start: 4px;
+  inset-block-start: 2px;
   animation: selected-item 0.5s ease-in-out infinite alternate;
 }
 
