@@ -1,6 +1,6 @@
 :root {
   --display-text-font-main: 'Inter', 'Helvetica', sans-serif;
-  --display-text-font-accent: 'Press Start 2P', 'Georgia', serif;
+  --display-text-font-accent: 'Press Start 2P', 'Courier New', monospace;
   --display-text-weight-base: 400;
   --display-text-weight-accent: 700;
   --display-text-size-1: 14px;
