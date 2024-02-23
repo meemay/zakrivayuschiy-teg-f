@@ -1,6 +1,61 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root.theme_light {
+  --color-text-primary: #000;
+  --color-lines: #000;
+
+  --color-bg-base: #fff;
+  --color-bg-stripe: #d3d3d3;
+  --color-bg-gradient-start: #e7e7e7;
+  --color-bg-gradient-end: #1a1a1a;
+
+  --color-button-slider-bg: #000;
+  --color-button-slider-text: #fff;
+
+  --color-icon-heart-contour: #000;
+  --color-icon-heart-body-hover: #000;
+  --color-icon-heart-core-hover: #000;
+
+  --display-text-weight-base: 400;
+  --display-text-weight-accent: 700;
+}
+
+:root.theme_dark {
+  --color-text-primary: #00cc14;
+  --color-lines: #00cc14;
+
+  --color-bg-base: #000;
+  --color-bg-stripe: #000;
+  --color-bg-gradient-start: #007f0c;
+  --color-bg-gradient-end: #004306;
+
+  --color-button-slider-bg: #00cc14;
+  --color-button-slider-text: #00cc14;
+
+  --color-icon-heart-body-hover: #00cc14;
+  --color-icon-heart-core-hover: #00cc14;
+  --color-icon-heart-contour: #00cc14;
+
+  --display-text-weight-base: 465;
+  --display-text-weight-accent: 785;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #00cc14;
+    --color-lines: #00cc14;
+
+    --color-bg-base: #000;
+    --color-bg-stripe: #000;
+    --color-bg-gradient-start: #007f0c;
+    --color-bg-gradient-end: #004306;
+
+    --color-button-slider-bg: #00cc14;
+    --color-button-slider-text: #00cc14;
+
+    --color-icon-heart-body-hover: #00cc14;
+    --color-icon-heart-core-hover: #00cc14;
+    --color-icon-heart-contour: #00cc14;
+
+    --display-text-weight-base: 465;
+    --display-text-weight-accent: 785;
+  }
+}
