@@ -1,6 +1,6 @@
 :root {
-  --display-text-font-main: 'Inter';
-  --display-text-font-accent: 'Press Start 2P';
+  --display-text-font-main: 'Inter', sans-serif;
+  --display-text-font-accent: 'Press Start 2P', serif;
   --display-text-weight-base: 400;
   --display-text-weight-accent: 700;
   --display-text-size-1: 14px;
