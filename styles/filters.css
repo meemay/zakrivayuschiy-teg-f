@@ -1,0 +1,27 @@
+.img-filter_retro {
+  filter: sepia(0.9);
+}
+
+.img-filter_monochrome {
+  filter: grayscale(80%);
+}
+
+.img-filter_high-contrast {
+  filter: contrast(200%);
+}
+
+.img-filter_phantom {
+  filter: hue-rotate(0.95turn) contrast(80%) invert(100%) saturate(50%);
+}
+
+.img-filter_enigma {
+  filter: blur(10px);
+}
+
+.img-filter_neon {
+  filter: brightness(150%) hue-rotate(0.8turn) contrast(150%) saturate(120%);
+}
+
+.img-filter_pop {
+  filter: hue-rotate(0.1turn) brightness(110%) contrast(110%);
+}

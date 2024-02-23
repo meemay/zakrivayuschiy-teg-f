@@ -78,11 +78,14 @@
 
 .card__cover {
   position: relative;
+  overflow: hidden;
 }
 
 .card__cover-label {
   position: absolute;
   content: '';
+  z-index: 1;
+  user-select: none;
   inset-block-start: var(--spacing-base);
   inset-inline-end: 2vw;
   color: currentColor;
@@ -321,30 +324,4 @@
 
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
-}
-
-/* img cover filters */
-
-.img-filter_retro {
-  filter: sepia(0.9);
-}
-
-.img-filter_monochrome {
-  filter: grayscale(80%);
-}
-
-.img-filter_high-contrast {
-  filter: contrast(200%);
-}
-
-.img-filter_phantom {
-  filter: hue-rotate(0.95turn) contrast(80%) invert(100%) saturate(60%);
-}
-
-.img-filter_enigma {
-  filter: blur(10px);
-}
-
-.img-filter_neon {
-  filter: brightness(150%) hue-rotate(0.82turn) contrast(150%) saturate(120%);
 }
