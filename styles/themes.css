@@ -30,7 +30,6 @@
   --color-button-slider-bg: #00cc14;
   --color-button-slider-text: #00cc14;
 
-  /* TODO: WHAT ARE COLORS FOR THE FUCKING HEARTS ???????? */
   --color-icon-heart-body-hover: #00cc14;
   --color-icon-heart-core-hover: #00cc14;
   --color-icon-heart-contour: #00cc14;
@@ -39,4 +38,24 @@
   --display-text-weight-accent: 785;
 }
 
-/* TODO: auto */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #00cc14;
+    --color-lines: #00cc14;
+
+    --color-bg-base: #000;
+    --color-bg-stripe: #000;
+    --color-bg-gradient-start: #007f0c;
+    --color-bg-gradient-end: #004306;
+
+    --color-button-slider-bg: #00cc14;
+    --color-button-slider-text: #00cc14;
+
+    --color-icon-heart-body-hover: #00cc14;
+    --color-icon-heart-core-hover: #00cc14;
+    --color-icon-heart-contour: #00cc14;
+
+    --display-text-weight-base: 465;
+    --display-text-weight-accent: 785;
+  }
+}

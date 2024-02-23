@@ -5,8 +5,8 @@
   --display-text-weight-accent: 700;
   --display-text-size-1: 14px;
   --display-text-size-2: 18px;
-  --display-text-size-3: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  --display-text-size-4: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --display-text-adaptive-size-1: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --display-text-adaptive-size-2: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 
   --color-text-primary: #000;
   --color-lines: #000;

@@ -33,11 +33,11 @@
 }
 
 .header__title {
-  font-size: var(--display-text-size-4);
+  font-size: var(--display-text-adaptive-size-2);
 }
 
 .header__description {
-  font-size: var(--display-text-size-3);
+  font-size: var(--display-text-adaptive-size-1);
 }
 
 .theme-menu__list {
@@ -139,7 +139,7 @@
 
 .save-dialog {
   position: fixed;
-  z-index: 10;
+  /* z-index: 10; */
   inset: 0;
   padding: 30px;
   inline-size: 90%;
@@ -148,7 +148,7 @@
   border: var(--border-line-size) solid var(--color-lines);
 }
 
-@media screen and (width >= 375px) {
+@media screen and (width > 375px) {
   .save-dialog {
     max-inline-size: 360px;
   }
@@ -224,6 +224,10 @@
   transform: translateX(0);
 }
 
+.button-theme_slider:focus-visible {
+  box-shadow: 2px 2px 0 var(--color-lines);
+}
+
 .button__text {
   font-family: var(--display-text-font-accent);
   font-size: var(--display-text-size-1);
@@ -241,6 +245,13 @@
 .save-icon {
   max-block-size: 28px;
   max-inline-size: 28px;
+}
+
+@media screen and (width > 375px) {
+  .save-icon {
+    max-block-size: 21px;
+    max-inline-size: 21px;
+  }
 }
 
 .save-dialog__button {
@@ -262,11 +273,6 @@
 .save__button {
   padding: 15px 19.5px;
   gap: 8px;
-}
-
-.save__button:focus,
-.card__like-button:focus {
-  box-shadow: 2px 2px 0 var(--color-lines);
 }
 
 @media screen and (width <= 375px) {
