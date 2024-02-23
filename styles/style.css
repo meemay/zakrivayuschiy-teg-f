@@ -11,6 +11,7 @@
 
 .content-section {
   max-inline-size: var(--content-max-inline-size);
+  min-inline-size: 375px;
   margin: 0 auto;
 }
 
@@ -139,7 +140,7 @@
 
 .save-dialog {
   position: fixed;
-  /* z-index: 10; */
+  z-index: 10;
   inset: 0;
   padding: 30px;
   inline-size: 90%;
