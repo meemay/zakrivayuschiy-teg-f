@@ -99,7 +99,7 @@
   opacity: 0.5;
 }
 
-@media screen and (width > 375) {
+@media screen and (width > 375px) {
   .card__cover-label {
     inset-inline-end: var(--spacing-base-compensated);
   }
