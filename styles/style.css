@@ -12,13 +12,13 @@
 .content-section {
   max-inline-size: var(--content-max-inline-size);
   margin: 0 auto;
-  background-color: var(--color-bg-base);
 }
 
 .header {
   display: grid;
   place-items: center;
   margin: 100px auto;
+  background-color: var(--color-bg-base);
   font-family: var(--display-text-font-accent, serif);
   border: var(--border-line-size) solid var(--color-lines);
 }
@@ -63,6 +63,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-bg-base);
   font-size: var(--display-text-size-2);
 }
 
@@ -128,12 +129,59 @@
   padding-block-end: var(--spacing-base-compensated);
 }
 
-.footer {
+/* dialog */
+
+.save {
   margin: 50px 0 100px;
-  display: grid;
-  grid-template-columns: 100vw;
-  place-items: center;
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.save-dialog {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  padding: 30px;
+  inline-size: 90%;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  border: var(--border-line-size) solid var(--color-lines);
+}
+
+@media screen and (width >= 375px) {
+  .save-dialog {
+    max-inline-size: 360px;
+  }
+}
+
+.save-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.save-dialog::backdrop {
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.save-dialog__content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.save-dialog__title {
+  font-family: var(--display-text-font-accent);
+  font-size: var(--display-text-size-1);
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.save-dialog__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 /* buttons */
@@ -177,7 +225,7 @@
 }
 
 .button__text {
-  font-family: 'Press Start 2P';
+  font-family: var(--display-text-font-accent);
   font-size: var(--display-text-size-1);
   font-variation-settings: 'wght' var(--display-text-weight-base);
   line-height: 90%;
@@ -195,6 +243,12 @@
   max-inline-size: 28px;
 }
 
+.save-dialog__button {
+  inline-size: 100%;
+  block-size: 38px;
+  text-transform: uppercase;
+}
+
 .card__icon-button:focus-visible {
   outline: var(--border-line-size) solid var(--color-lines);
   outline-offset: -3px;
@@ -205,18 +259,18 @@
   inline-size: 130px;
 }
 
-.footer__save-button {
+.save__button {
   padding: 15px 19.5px;
   gap: 8px;
 }
 
-.footer__save-button:focus,
+.save__button:focus,
 .card__like-button:focus {
   box-shadow: 2px 2px 0 var(--color-lines);
 }
 
 @media screen and (width <= 375px) {
-  .footer__save-button {
+  .save__button {
     flex-direction: column;
   }
 }

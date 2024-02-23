@@ -6,7 +6,7 @@ TODO:
  - [x] like animation
  - [x] hover effects
  - [x] focus effect
- - [ ] dialog element
+ - [x] dialog element
 
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
