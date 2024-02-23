@@ -1,7 +1,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--display-text-font-main, sans-serif);
+  font-family: var(--display-text-font-main);
   font-weight: var(--display-text-weight-base);
   background-image: var(--background);
   background-attachment: fixed;
@@ -20,7 +20,7 @@
   place-items: center;
   margin: 100px auto;
   background-color: var(--color-bg-base);
-  font-family: var(--display-text-font-accent, serif);
+  font-family: var(--display-text-font-accent);
   border: var(--border-line-size) solid var(--color-lines);
 }
 
@@ -87,15 +87,22 @@
   z-index: 1;
   user-select: none;
   inset-block-start: var(--spacing-base);
-  inset-inline-end: 2vw;
+  inset-inline-end: calc(var(--spacing-base-compensated) / 2);
   color: currentColor;
   font-family: var(--display-text-font-accent);
   font-size: var(--display-text-size-1);
+  font-weight: 400;
   text-transform: uppercase;
   text-shadow: -1px -1px 0 var(--color-bg-base), 1px -1px 0 var(--color-bg-base),
     -1px 1px 0 var(--color-bg-base), 1px 1px 0 var(--color-bg-base);
   mix-blend-mode: hard-light;
   opacity: 0.5;
+}
+
+@media screen and (width > 375) {
+  .card__cover-label {
+    inset-inline-end: var(--spacing-base-compensated);
+  }
 }
 
 @supports (-webkit-text-stroke: #fff) {
@@ -109,8 +116,15 @@
   display: block;
   inline-size: 100%;
   block-size: 100%;
+  max-block-size: 375px;
   object-fit: cover;
   object-position: center;
+}
+
+@media screen and (width > 375) {
+  .card__cover-image {
+    max-block-size: 700px;
+  }
 }
 
 .card__description {
@@ -300,6 +314,7 @@
   content: '▶';
   position: absolute;
   inset-inline-start: var(--menu-arrow-offset);
+  inset-block-start: 4px;
   animation: selected-item 0.5s ease-in-out infinite alternate;
 }
 
