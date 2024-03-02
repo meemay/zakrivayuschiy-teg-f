@@ -159,7 +159,7 @@
   position: fixed;
   z-index: 10;
   inset: 0;
-  padding: 30px;
+  padding: 40px;
   inline-size: 90%;
   background-color: var(--color-bg-base);
   color: var(--color-text-primary);
@@ -169,7 +169,7 @@
 @media screen and (width > 375px) {
   .save-dialog {
     max-inline-size: 360px;
-    padding: 40px;
+    padding: 30px;
   }
 }
 
