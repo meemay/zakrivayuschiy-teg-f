@@ -169,6 +169,7 @@
 @media screen and (width > 375px) {
   .save-dialog {
     max-inline-size: 360px;
+    padding: 40px;
   }
 }
 
